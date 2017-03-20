@@ -1,0 +1,133 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="WebHelpdeskSupport.SiteMaster" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ubiz Solution</title>
+    <link href="MetroUI/css/metro.css" rel="stylesheet" />
+    <link href="MetroUI/css/metro-icons.css" rel="stylesheet" />
+    <link href="MetroUI/css/metro-responsive.css" rel="stylesheet" />
+    <link href="MetroUI/css/metro-rtl.css" rel="stylesheet" />
+    <link href="MetroUI/css/metro-schemes.css" rel="stylesheet" />
+    <script src="MetroUI/js/jquery-2.1.3.min.js"></script>
+    <script src="MetroUI/js/jquery.dataTables.min.js"></script>
+    <script src="MetroUI/js/metro.min.js"></script>
+    <script src="MetroUI/js/metro.js"></script>
+   
+    <script>
+    $(function(){
+        $("#carousel").carousel();
+    });
+    </script>
+</head>
+
+<body style="background-color: #ecf0f5;">
+    <form runat="server">
+       
+            <div class="app-bar darcula">
+               <div class ="container">
+                <a class="app-bar-element" href="default.aspx">Logo</a>
+                <span class="app-bar-divider"></span>
+                <ul class="app-bar-menu">
+                     <!--<li>
+                       <a href="" class="dropdown-toggle">Products</a>
+                        <ul class="d-menu" data-role="dropdown">
+                            <li><a href="">Ask a Question</a></li>
+                            <li><a href="">Spartan</a></li>
+                            <li class="divider"></li>
+                            <li><a href="" class="dropdown-toggle">Other Products</a>
+                                <ul class="d-menu" data-role="dropdown">
+                                    <li><a href="">Internet Explorer 10</a></li>
+                                    <li><a href="">Skype</a></li>
+                                    <li><a href="">Surface</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>-->
+                    <li><a href="Ask_Questions.aspx">Ask a Question</a></li>
+                    <li><a href="">Knowledge base</a></li>
+                    <li><a href="Customer_Issue.aspx">Issues</a></li>
+                    
+                </ul>
+                <div class="app-bar-element place-right">
+                    <a class="dropdown-toggle fg-white"><span class="mif-enter"></span> Log in</a>
+                    <div class="app-bar-drop-container bg-white fg-dark place-right"
+                            data-role="dropdown" data-no-close="true">
+                        <div class="padding20">
+                          
+                                <h4 class="text-light">Login to service...</h4>
+                                <div class="input-control text">
+                                    <span class="mif-user prepend-icon"></span>
+                                    <input type="text">
+                                </div>
+                                <div class="input-control text">
+                                    <span class="mif-lock prepend-icon"></span>
+                                    <input type="password">
+                                </div>
+                                <label class="input-control checkbox small-check">
+                                    <input type="checkbox">
+                                    <span class="check"></span>
+                                    <span class="caption">Remember me</span>
+                                </label>
+
+                                <div class="form-actions">
+                                    <button class="button">Login</button>
+                                    <button class="button link">Cancel</button>
+                                </div>
+                            <hr/>
+                            <center><h6><small><p>you're not a member please <a href="Register.aspx">Sign up!</a></p></small></h6></center>
+                        </div>
+                    </div>
+                 </div>
+
+           </div> 
+        </div>
+       <div class="bg-steel no-tablet-portrait no-phone">
+        <div class="container padding20 fg-white">
+        <div class="carousel" data-role="carousel" data-height="250" data-control-next="<span class='mif-chevron-right'></span>" data-control-prev="<span class='mif-chevron-left'></span>">
+             <div class="slide fg-white">
+                <div class="place-left" style="margin-right: 20px">
+                    <img src="Media/css-logo.png" style="height: 200px"/>
+                    
+                </div>
+                <h1>Developed with advice</h1>
+                <p>Metro UI CSS developed with the advice of Microsoft to build the user interface and include: general styles, grid, layouts, typography, 20+ components, 300+ built-in icons.</p>
+                <p>Metro UI CSS build with {LESS}. Metro UI CSS is open source and has MIT licensing model.</p>
+             </div>
+            
+            <div class="slide fg-white">
+                <div class="place-left" style="margin-right: 20px">
+                    <img src="Media/bizspark_b_2.png" style="height: 200px"/>
+                          
+                </div>
+                <h1>BizSpark Startup</h1>
+                <p>Metro UI CSS is a BizSpark Startup. Microsoft BizSpark is a global program that helps software startups succeed by giving them access to software development tools, connecting them with key industry players, and providing marketing visibility.</p>
+                <p>BizSpark provides free software, support, and visibility to help startups succeed. Join BizSpark and become part of a global community that has over 50,000 members in 100+ countries.</p>
+                <a class="button primary" href="http://bizspark.com">Join the BizSpark Program now</a>
+            </div>
+
+            <div class="slide fg-white">
+                <div class="place-left" style="margin-right: 20px">
+                    <img src="Media/phpstorm_7_eap.png" style="height: 200px"/>
+                </div>
+                <h1>Thanks to JetBrains</h1>
+                <p>Thanks to the company JetBrains for supporting the project in the form of a license for a great product PhpStorm.</p>
+                <a class="button success" href="http://www.jetbrains.com/phpstorm/">Get PhpStorm now!</a>
+            </div>
+        </div>
+        </div>
+        </div>
+        <div class="container body-content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+            <hr/>
+            
+            <footer>
+                <center><p>Copyright &copy; <%: DateTime.Now.Year %> Ubiz Solution Co., Ltd. All rights reserved.</p></center>
+            </footer>
+        </div>
+    </form>
+</body>
+</html>
